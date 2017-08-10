@@ -1,5 +1,7 @@
 #!/bin/bash
 #PBS -l nodes=1:ppn=2,mem=32gb
+#PBS -m abe
+#PBS -M gouil.q@wehi.edu.au
 
 module load samtools
 set -x

@@ -1,5 +1,8 @@
 #!/bin/bash
 #PBS -q small
+#PBS -m abe
+#PBS -M gouil.q@wehi.edu.au
+
 
 # Usage: qsub -F "/path/to/genome.fasta /path/to/reads.fasta /path/to/variants.vcf" nanopolish_phase_reads_run.sh
 #
