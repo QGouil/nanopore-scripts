@@ -23,6 +23,7 @@ INPUT_FASTA=$TMP_DIR/$(basename $FASTA).${PBS_ARRAYID}.$FMT
 cd ~/tmp
 if [ ! -f ${INPUT_FASTA}.sorted.bam ]; then
   bwa mem -x ont2d $GENOME $INPUT_FASTA | samtools sort -T ${INPUT_FASTA}.tmp -o ${INPUT_FASTA}.sorted.bam
+  echo "ran alignment"
 fi
 if [ ! ${INPUT_FASTA}.sorted.bam.bai ]; then
   samtools index ${INPUT_FASTA}.sorted.bam || echo "ERROR: samtools index failed"
