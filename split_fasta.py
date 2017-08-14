@@ -7,12 +7,16 @@ from Bio import SeqIO
 import sys
 import os
 
+
 fasta = sys.argv[1]
 n = int(sys.argv[2])
-if len(sys.argv) > 3:
-    fmt = sys.argv[3]
-else:
+if fasta.endswith("a"):
     fmt = "fasta"
+elif fasta.endswith("q"):
+    fmt = "fastq"
+else:
+    print("ERROR: Failed to read file {}. (Is it a fasta / fastq?)".format(fasta), file=sys.stderr)
+    exit(1)
 out_fasta = os.path.join(os.getcwd(), os.path.basename(fasta))
 
 with open(fasta, 'r') as in_handle:
