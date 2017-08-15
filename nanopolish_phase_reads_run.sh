@@ -32,11 +32,8 @@ SCRIPTS_DIR=$PBS_O_HOME/wehisan_home/scripts/quentin/nanopore-scripts
 mkdir -p $TMP_DIR
 cd $TMP_DIR
 if [ ! -f $(basename $FASTA).1.$FMT ]; then
-	if [ "$FMT" == "fasta" ]; then
-		python $SCRIPTS_DIR/split_fasta.py $FASTA $N
-	else 
-		python $SCRIPTS_DIR/split_fasta.py $FASTA $N fastq
-	fi
+	python $SCRIPTS_DIR/split_fasta.py $FASTA $N
+	echo "splitting the reads for parallelisation"
 fi
 ARRAY_ID=$(qsub -F "$GENOME $FASTA $VCF $TMP_DIR" -t 1-$(ls -1 $TMP_DIR/$(basename $FASTA).*.$FMT | wc -l) $SCRIPTS_DIR/nanopolish_phase_reads.sh)
 qsub -W "depend=afteranyarray:$ARRAY_ID" -F "$FASTA $TMP_DIR" $SCRIPTS_DIR/nanopolish_phase_reads_clean.sh
