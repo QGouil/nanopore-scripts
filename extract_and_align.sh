@@ -20,7 +20,7 @@ READ_GROUP=$2
 GENOME=$3
 PARENT_DIR=$(dirname $READS_DIR)
 OUT_NAME=$(basename $READS_DIR)
-SCRIPTS DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
+SCRIPTS_DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
 NPROC=$(nproc)
 
 if [ "$#" -gt 3 ]; then
