@@ -25,7 +25,7 @@ fi
 
 N=10000
 TMP_DIR="$PBS_O_HOME/tmp/$(dirname $FASTA)"
-SCRIPTS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+SCRIPTS DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
 
 mkdir -p $TMP_DIR
 cd $TMP_DIR

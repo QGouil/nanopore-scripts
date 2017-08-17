@@ -7,7 +7,7 @@
 # Basecalled: /path/to/fast5/albacore
 
 # Find the absolute path to this and related scripts (eg ~/nanopore-scripts)
-SCRIPTS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+SCRIPTS DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
 # Load anaconda3 module which contains albacore
 module load anaconda3
 # Check that albacore is installed - if not, quit and throw and error message

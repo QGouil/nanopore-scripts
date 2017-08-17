@@ -17,7 +17,7 @@ else
   echo "ERROR: $FASTA format not recognised"
   exit 1
 fi
-SCRIPTS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+SCRIPTS DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
 
 # pull out the header
 HEADER=$TMP_DIR/nanopolish.methylation.header.tsv
