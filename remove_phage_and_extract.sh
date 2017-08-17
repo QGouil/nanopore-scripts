@@ -17,7 +17,7 @@ cd $PBS_O_WORKDIR
 READS_DIR=$1
 PARENT_DIR=$(dirname $READS_DIR)
 OUT_NAME=$(basename $READS_DIR)
-SCRIPTS_DIR=$PBS_O_HOME/wehisan_home/scripts/quentin/nanopore-scripts
+SCRIPTS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 NPROC=$(nproc)
 
 PHAGE_DIR=$PARENT_DIR/$4

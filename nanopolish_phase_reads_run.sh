@@ -27,7 +27,7 @@ else
 fi
 N=10000
 TMP_DIR="$PBS_O_HOME/tmp/$(dirname $FASTA)"
-SCRIPTS_DIR=$PBS_O_HOME/wehisan_home/scripts/quentin/nanopore-scripts
+SCRIPTS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 mkdir -p $TMP_DIR
 cd $TMP_DIR
