@@ -20,7 +20,7 @@ OUT_NAME=$(basename $READS_DIR)
 SCRIPTS_DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
 NPROC=$(nproc)
 
-PHAGE_DIR=$PARENT_DIR/$4
+PHAGE_DIR=$PARENT_DIR/$2
 mkdir -p $PHAGE_DIR
 
 # extract fasta
