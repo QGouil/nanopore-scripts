@@ -9,6 +9,7 @@ GENOME=$1
 FASTA=$2
 VCF=$3
 TMP_DIR=$4
+
 if [ $(echo $FASTA | grep -c -e "a$") -gt 0 ]; then
   FMT="fasta"
 elif [ $(echo $FASTA | grep -c -e "q$") -gt 0 ]; then
