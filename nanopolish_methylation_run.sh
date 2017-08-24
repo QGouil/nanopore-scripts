@@ -6,7 +6,6 @@
 # Usage: qsub -F "path/to/genome.fasta absolute_or_relative_path/to/reads.fastq" nanopolish_methylation_run.sh
 # point to the genome stored on torquelord. Give the full extension. The bwa mem index should be .fa.pac etc.
 # the reads will be in fasta folder.
-# make sure to call that in the AGRF folder?
 
 
 set -x
