@@ -1,4 +1,5 @@
 #!/bin/bash
+#PBS -q static
 #PBS -l nodes=1:ppn=2,mem=64gb
 #PBS -m abe
 #PBS -M gouil.q@wehi.edu.au

@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -q small
+#PBS -q static
 #PBS -m abe
 #PBS -M gouil.q@wehi.edu.au
 

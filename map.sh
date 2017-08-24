@@ -1,4 +1,5 @@
 #!/bin/bash
+#PBS -q static
 #PBS -l nodes=1:ppn=2,mem=16gb
 module load bwa
 module load samtools
