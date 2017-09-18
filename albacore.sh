@@ -1,4 +1,5 @@
 #!/bin/bash
+#PBS -q static
 #PBS -l nodes=1:ppn=2,mem=16gb
 
 # Usage: ./albacore_run.sh [-h] [-i INPUT_DIR] [-o OUTPUT_DIR] [-c CONFIG] [-5] [-q] /path/to/fast5
