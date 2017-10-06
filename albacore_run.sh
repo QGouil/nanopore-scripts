@@ -12,6 +12,8 @@ SCRIPTS_DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
 # Load my own environment for albacore2
 module load anaconda3/4.3.1
 source activate albacore2
+unset PYTHONHOME
+unset PYTHONPATH
 
 # # Check that albacore is installed - if not, quit and throw and error message
 # if [ $(pip freeze | grep -c "ont-albacore") -eq 0 ]; then
