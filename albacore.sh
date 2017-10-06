@@ -5,8 +5,8 @@
 # Usage: ./albacore_run.sh [-h] [-i INPUT_DIR] [-o OUTPUT_DIR] [-c CONFIG] [-5] [-q] /path/to/fast5
 # Subprogram usage: qsub -F "/absolute/path/to/fast5 raw albacore r94_450bps_linear.cfg fast5,fastq" albacore.sh 
 
-# Load anaconda3 module, where albacore is installed
-module load anaconda3
+# Load nanopore module, where latest albacore is installed
+module load nanopore
 # Load parallel for copying
 module load parallel
 

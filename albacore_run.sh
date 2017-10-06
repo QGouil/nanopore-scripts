@@ -8,8 +8,10 @@
 
 # Find the absolute path to this and related scripts (eg ~/nanopore-scripts)
 SCRIPTS_DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
-# Load anaconda3 module which contains albacore
-module load anaconda3
+# Load anaconda3 module which contains albacore. NO!! It loads albacore1.2.6, I want 2.0.2
+#module load anaconda3
+#Load nanopore module instead
+module load nanopore
 # Check that albacore is installed - if not, quit and throw and error message
 if [ $(pip freeze | grep -c "ont-albacore") -eq 0 ]; then
   echo "ERROR:Albacore not installed. Please install from wheel with"
