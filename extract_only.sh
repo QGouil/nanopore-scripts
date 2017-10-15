@@ -24,5 +24,5 @@ NPROC=$(nproc)
 mkdir -p $PARENT_DIR/fasta
 FASTQ=$PARENT_DIR/fasta/${OUT_NAME}.fastq
 find $READS_DIR -name "*.fast5" | \
-  parallel -X nanopolish extract -q {} > $FASTQ
+  parallel -X nanopolish extract -q {} -o $FASTQ
 
