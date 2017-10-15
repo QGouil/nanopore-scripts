@@ -3,7 +3,7 @@
 #PBS -m abe
 #PBS -M gouil.q@wehi.edu.au
 
-module load nanopolish
+module load nanopolish/0.7.1
 module load samtools
 
 set -x
