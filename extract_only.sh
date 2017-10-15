@@ -7,7 +7,7 @@
 # Only use phage_reads_subdir if a calibration strand has been added
 # Run from AGRF_Data folder.
 
-module load nanopolish
+module load nanopolish/0.7.1 
 module load parallel
 
 
@@ -24,5 +24,5 @@ NPROC=$(nproc)
 mkdir -p $PARENT_DIR/fasta
 FASTQ=$PARENT_DIR/fasta/${OUT_NAME}.fastq
 find $READS_DIR -name "*.fast5" | \
-  parallel -X nanopolish extract -q {} -o $FASTQ
+  parallel -X nanopolish extract -q {} > $FASTQ
 
