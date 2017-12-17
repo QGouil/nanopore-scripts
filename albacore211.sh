@@ -7,7 +7,7 @@
 
 # Load my own environment for albacore2
 module load anaconda3/4.3.1
-source activate albacore1.2.2
+source activate albacore2.1
 unset PYTHONHOME
 unset PYTHONPATH
 # Load parallel for copying

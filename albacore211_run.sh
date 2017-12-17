@@ -11,7 +11,7 @@ SCRIPTS_DIR=~/wehisan_home/scripts/quentin/nanopore-scripts
 
 # Load my own environment for albacore2
 module load anaconda3/4.3.1
-source activate albacore1.2.2
+source activate albacore2.1
 unset PYTHONHOME
 unset PYTHONPATH
 
@@ -84,5 +84,5 @@ Config: $CONFIG
 Output: $MODE
 Jobs: $NUM_RUNS"
 # Run the array job
-qsub -t 1-$NUM_RUNS -F "$PARENT $INPUT $OUTPUT $CONFIG $MODE" $SCRIPTS_DIR/albacore122.sh
+qsub -t 1-$NUM_RUNS -F "$PARENT $INPUT $OUTPUT $CONFIG $MODE" $SCRIPTS_DIR/albacore.sh
 
